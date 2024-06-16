@@ -1,1 +1,10 @@
 É recomendado colocar components e outras coisas q não envolve a lógica de negócio no diretório `src/components` e as páginas no diretório `src/pages`.
+
+Hidratação:
+
+O JavaScript no lado do cliente é carregado e executado.
+O React "hidrata" o HTML existente, ligando-o ao código React no cliente.
+Durante a hidratação, o React anexa event listeners e reativa a funcionalidade JavaScript para tornar a página interativa.
+O HTML estático gerado pelo servidor é transformado em uma aplicação React dinâmica no cliente
+
+Se um componente server side estiver dentro de um component client side, o React irá renderizar o componente server side e depois o client side. Sem alterar o conteúdo do componente server side.

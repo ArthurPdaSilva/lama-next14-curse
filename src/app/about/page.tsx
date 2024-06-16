@@ -1,10 +1,48 @@
-const About = () => {
+// Ele vai cachianr a imagem e vai ser carregada apenas quando for visível na tela
+// E não precisa criar várias resoluções da imagem, ele vai fazer isso automaticamente
+import Image from "next/image";
+import styles from "./about.module.css";
+
+// Só precisa fazer isso para gerar um meta tag para o SEO
+export const metadata = {
+  title: "About Page",
+  description: "About description",
+};
+
+const AboutPage = () => {
   return (
-    <div>
-      <h1>About</h1>
-      <p>This is the about page</p>
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h2 className={styles.subtitle}>About Agency</h2>
+        <h1 className={styles.title}>
+          We create digital ideas that are bigger, bolder, braver and better.
+        </h1>
+        <p className={styles.desc}>
+          We create digital ideas that are bigger, bolder, braver and better. We
+          believe in good ideas flexibility and precission We’re world’s Our
+          Special Team best consulting & finance solution provider. Wide range
+          of web and software development services.
+        </p>
+        <div className={styles.boxes}>
+          <div className={styles.box}>
+            <h1>10 K+</h1>
+            <p>Year of experience</p>
+          </div>
+          <div className={styles.box}>
+            <h1>10 K+</h1>
+            <p>Year of experience</p>
+          </div>
+          <div className={styles.box}>
+            <h1>10 K+</h1>
+            <p>Year of experience</p>
+          </div>
+        </div>
+      </div>
+      <div className={styles.imgContainer}>
+        <Image src="/about.png" alt="About Image" fill className={styles.img} />
+      </div>
     </div>
   );
 };
 
-export default About;
+export default AboutPage;
